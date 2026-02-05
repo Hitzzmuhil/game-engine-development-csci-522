@@ -1,47 +1,93 @@
-# \# Game Engine Systems – CSCI 522
+# Game Engine Development – CSCI 522
 
-# 
+This repository contains my coursework, milestones, and assignments for **CSCI 522: Game Engine Development** at the University of Southern California. The project focuses on implementing core game engine systems, AI behaviors, rendering optimizations, physics, and debugging tools.
 
-# This repository documents engine systems I implemented as part of USC's Game Engine Development course (CSCI 522).  
+---
 
-# \*\*Note:\*\* source code is not included due to course restrictions — these systems were built on top of a provided base engine.
+## Repository Structure
 
-# 
+├── SYSTEMS.md # High-level overview of implemented systems
+├── docs/ # Detailed PDFs for milestones and assignments
+├── videos/ # Video demonstration links (hosted on Google Drive)
+├── README.md # Main project overview
 
-# \## Systems Implemented
+---
 
-# \- NPC AI \& waypoint navigation (randomized waypoints, target tracking). :contentReference\[oaicite:2]{index=2}  
+## Implemented Systems and Features
 
-# \- Navigation Mesh pathfinding with collision-free shortest paths and dynamic recalculation. :contentReference\[oaicite:3]{index=3}  
+### Server-Based Asset Loading
+- Implemented dynamic asset loading via an HTTP server
+- Assets are fetched over the network instead of local disk storage
+- Enables centralized asset management and seamless updates
 
-# \- Collision \& Physics Manager: sphere \& AABB bounding volumes, sliding collision response, gravity checks. :contentReference\[oaicite:4]{index=4}  
+### NPC Waypoint AI and Target Tracking
+- Random waypoint-based movement with walk/run transitions
+- Real-time target tracking using rotation alignment
+- Shooting behavior based on range and line-of-sight detection
 
-# \- Rendering optimization via AABB \& camera frustum culling. :contentReference\[oaicite:5]{index=5}  
+### Navigation Mesh Pathfinding
+- Collision-free shortest path computation
+- Intermediate waypoint generation for smooth movement
+- Dynamic path recalculation for adaptive NPC navigation
 
-# \- Server-based asset loading (HTTP-based retrieval). :contentReference\[oaicite:6]{index=6}  
+### Frustum Culling using AABB
+- Axis-Aligned Bounding Boxes computed per mesh
+- Camera frustum plane generation
+- Objects outside the view frustum are culled to optimize rendering
+- Debug visualization to validate culling behavior
 
-# \- Debug visualization (DebugRenderer and runtime overlays). :contentReference\[oaicite:7]{index=7}
+### Debug Visualization and Tools
+- Persistent on-screen debug text displaying camera state
+- Dynamic positioning to ensure continuous visibility
+- Enhanced system transparency and debugging support
 
-# 
+### Collision and Physics System
+- Physics Manager for handling bounding volumes
+- Sphere-based collision detection for soldiers
+- Axis-Aligned Bounding Boxes for static objects
+- Sliding collision response and gravity simulation
 
-# \## Highlights
+---
 
-# \- Collision-free NavMesh routing with evenly spaced waypoints and runtime path adjustments. :contentReference\[oaicite:8]{index=8}  
+## Documentation
 
-# \- Physics Manager enabling sliding along obstacles and robust gravity fallback behavior. :contentReference\[oaicite:9]{index=9}  
+All detailed documentation for milestones and assignments is available in the `docs/` directory:
 
-# \- Replaced disk-based asset loading with HTTP GET asset retrieval for scalable deployments. :contentReference\[oaicite:10]{index=10}
+- Server-Based Asset Loading
+- NPC Waypoint AI
+- Navigation Mesh Pathfinding
+- Frustum Culling with AABB
+- Debug Visualization and Tools
+- Collision and Physics System
 
-# 
+Each document explains system design, implementation details, and behavior.
 
-# \## Documentation
+---
 
-# See `/docs` for full assignment reports and design notes (PDFs included).
+## Video Demonstrations
 
-# 
+Video demonstrations are hosted externally due to GitHub file size limits.
 
-# \## Demo Videos
+Please refer to:  
+➡️ **[`videos/README.md`](videos/README.md)**
 
-# See `/videos` for demonstration links (hosted on YouTube/Drive; linked here, not uploaded).
+This file contains:
+- Google Drive links to all demo videos
+- Descriptions of each video
+- Corresponding milestones and assignments
 
+---
 
+## Notes
+
+- Video files are not stored in this repository to comply with GitHub size constraints
+- All demo videos are accessible via public Google Drive links
+- This repository is intended for academic evaluation and learning purposes
+
+---
+
+## Author
+
+**Name:** Muhil Thiruvenkadam  
+**Course:** CSCI 522 – Game Engine Development  
+**Institution:** University of Southern California
